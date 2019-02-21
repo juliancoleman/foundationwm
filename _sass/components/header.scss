@@ -24,7 +24,7 @@ header aside {
   width: 100%;
 
   transform: scale(1, 0);
-  transition: transform 250ms ease-in-out;
+  transition: transform 200ms ease-in-out;
   transform-origin: top;
 }
 
@@ -50,7 +50,7 @@ header nav a {
   letter-spacing: $header--letter-spacing;
   text-decoration: none;
   text-transform: uppercase;
-  transition: opacity 150ms ease-in-out;
+  transition: opacity 75ms ease-in-out;
 }
 
 
@@ -67,7 +67,7 @@ header nav a:hover {
 
 .nav-toggle:checked ~ aside a {
   opacity: 1;
-  transition: opacity 200ms ease-in-out 150ms;
+  transition: opacity 150ms ease-in-out 100ms;
 }
 
 .nav-toggle-label {
