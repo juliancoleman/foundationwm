@@ -1,0 +1,49 @@
+@import "palette";
+
+// Box shadow
+$box-shadow: 0 2px 5px rgba(8, 33, 56, 0.15),
+             0 2px 20px rgba(8, 33, 56, 0.1);
+
+
+// Containers
+$max-width: 1280px;
+
+/**
+ * Elevation
+ *
+ * Based on Material elevation
+ * https://material.io/design/environment/elevation.html
+ */
+
+$elevation--dialog: 24;
+$elevation--modal__bottom-sheet: 16;
+$elevation--modal__side-sheet: 16;
+$elevation--navigation__drawer: 16;
+$elevation--button--floating-action__pressed: 12;
+$elevation--sheet__bottom: 8;
+$elevation--sheet__side: 8;
+$elevation--naviation-bar__bottom: 8;
+$elevation--app-bar__bottom: 8;
+$elevation--menu: 8;
+$elevation--card__dragging: 8;
+$elevation--button--contained__pressed: 8;
+$elevation--button--floating-action__resting: 6;
+$elevation--snackbar: 6;
+$elevation--app-bar__scrolled: 4;
+$elevation--refresh-indicator: 3;
+$elevation--search-bar__scrolled: 3;
+$elevation--button--contained__resting: 2;
+$elevation--search-bar__resting: 1;
+$elevation--card__resting: 1;
+$elevation--switch: 1;
+$elevation--button--text: 0;
+$elevation--app-bar__resting: 0;
+
+// Header
+$header--background-gradient__start: rgba($midnight-blue-accent, 0.7);
+$header--background-gradient__end: rgba($midnight-blue-accent, 0.4);
+$header--text-color: $white;
+$header--padding: 44px;
+$header--font-size: 22px;
+$header--line-height: 36px;
+$header--letter-spacing: 0.1em;

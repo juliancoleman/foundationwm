@@ -1,0 +1,158 @@
+@import "../variables";
+@import "../fonts";
+
+header {
+  font-family: $font--body;
+  padding: $header--padding;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: $elevation--app-bar__resting;
+}
+
+header .container {
+  display: none;
+}
+
+header aside {
+  background: rgba(33, 43, 58, 0.62);
+  padding: 124px 0 50px;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  transform: scale(1, 0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: top;
+}
+
+header aside a {
+  padding-left: 24px;
+  display: block;
+}
+
+
+header nav ul {
+  list-style: none;
+}
+
+header nav li {
+  margin-bottom: 1em;
+}
+
+header nav a {
+  color: $header--text-color;
+  font-size: $header--font-size;
+  line-height: $header--line-height;
+  opacity: 0;
+  letter-spacing: $header--letter-spacing;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: opacity 150ms ease-in-out;
+}
+
+
+header nav a:hover {
+  color: $black;
+}
+
+////////////
+
+.nav-toggle { display: none; }
+.nav-toggle:checked ~ aside {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ aside a {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out 150ms;
+}
+
+.nav-toggle-label {
+  margin-left: 24px;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span {
+  display: inline-block;
+  background-image: url("../../assets/images/nav-toggle.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 21px;
+  width: 24px;
+}
+
+////////////
+
+@media screen and (min-width: 878px) {
+  .nav-toggle-label, header aside { display: none; }
+
+  header > nav,
+  header .search {
+    display: block;
+  }
+
+  header .search {
+    position: relative;
+    outline: 0;
+    color: $white;
+    padding: 0 12px;
+    margin: 0 24px;
+    border-radius: 25px;
+    background: transparent;
+    border: 2px solid $white;
+  }
+
+  header .search::before {
+    content: "";
+    position: absolute;
+    background: url("../../assets/images/search.svg");
+    height: 8px;
+    width: 8px;
+    left: 12px;
+    top: 50%;
+  }
+
+  header nav a {
+    display: inline;
+    opacity: 1;
+  }
+  header {
+    background: linear-gradient(
+      $header--background-gradient__start,
+      $header--background-gradient__end
+    );
+
+
+  }
+
+  header .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+  }
+
+
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  header nav li {
+    margin-bottom: 0;
+  }
+}
