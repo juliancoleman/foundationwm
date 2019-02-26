@@ -75,8 +75,14 @@ body, main, figure, ul, li, form {
 
 // shrink the #fwm-logo when resizing
 @media screen and (max-width: 600px) {
+  #landing-banner {
+    height: 768px;
+  }
+
   #landing-banner #fwm-logo {
-    width: 100%;
+    height: 215px;
+    width: 294px;
+    margin-bottom: 50px;
   }
 }
 
