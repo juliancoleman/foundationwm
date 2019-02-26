@@ -3,6 +3,7 @@
 
 @charset "utf-8";
 
+
 @import "components/header";
 @import "components/main"; // The semantic <main>, not a stylesheet entrypoint.
 @import "components/footer";
@@ -19,5 +20,70 @@ body, main, figure, ul, li, form {
 }
 
 .container {
+  margin: 0 auto;
   max-width: $max-width;
+}
+
+///////////////
+// Home page //
+///////////////
+
+
+
+#landing-banner {
+  position: relative;
+  height: 950px;
+  background-image: url("https://trekbible.com/wp-content/uploads/2018/08/california-cliff-cliffs-36363.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  font-family: $font--body;
+}
+
+#landing-banner .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: $elevation--card__resting;
+}
+
+#landing-banner .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient($max-width at 50% 70%, rgba(13, 28, 53, 0) 0%, $navy-blue 100%), linear-gradient(180deg, rgba(20, 32, 52, 0.53) 48%, $navy-blue 90%);
+}
+
+#landing-banner #fwm-logo {
+  background-image: url("../../assets/images/FWM Logo on Dark background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 430px;
+  width: 588px;
+
+  margin-bottom: 20px;
+}
+
+#landing-banner h3 {
+  color: $lavender;
+  line-height: 59px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin: 0;
+  margin-bottom: 91px;
+}
+
+#landing-banner button {
+  margin-bottom: 112px;
 }

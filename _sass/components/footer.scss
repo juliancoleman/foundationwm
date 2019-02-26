@@ -3,12 +3,13 @@
 
 footer {
   background: $footer--background;
+  color: $white;
   font-family: $font--body;
   padding: $footer--padding__mobile;
 }
 
 footer #foundation-logo__footer {
-  background: url("../../assets/images/FWM-logo-on-dark.png");
+  background: url("../../assets/images/FWM logo on dark.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
@@ -19,6 +20,10 @@ footer #foundation-logo__footer {
 
 footer nav {
   margin-bottom: $footer--nav__margin--mobile;
+}
+
+footer nav.contact {
+  margin-bottom: 0;
 }
 
 footer nav h3, footer nav a {
@@ -79,6 +84,8 @@ a#footer-banner {
   width: 82px;
 }
 
+////////////
+
 @media screen and (min-width: 878px) {
   footer {
     padding: $footer--padding__desktop;
@@ -87,20 +94,30 @@ a#footer-banner {
   footer .container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: $footer--background__width--desktop .8fr 1fr 1fr;
+    grid-template-columns: $footer--background__width--desktop 0.8fr 1fr 1fr;
   }
 
   footer #foundation-logo__footer {
-    background: url("../../assets/images/FWM-Logo-on-Dark-background-1.png");
+    background: url("../../assets/images/FWM Logo on Dark background-1.png");
     background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    height: $footer--background__height--desktop;
+    background-position: center;
+    background-size: contain;
+    height: calc(100% - 0px);
     width: $footer--background__width--desktop;
   }
 
+
   footer nav {
-    margin-left: 100px;
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+
+  footer nav:first-of-type {
+    margin-left: 90px;
+  }
+
+  footer nav.contact li:last-of-type {
+    margin-bottom: 0;
   }
 
   footer nav a {
@@ -117,9 +134,11 @@ a#footer-banner {
   }
 }
 
+////////////
+
 @media screen and (min-width: 1301px) {
   footer .container {
-    grid-template-columns: $footer--background__width--desktop 1fr 2fr 1fr;
+    grid-template-columns: $footer--background__width--desktop 1fr 1.5fr 1fr;
   }
 
   footer nav ul {
