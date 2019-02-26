@@ -66,6 +66,7 @@ a#footer-banner {
   position: relative;
   padding: 23px;
   text-align: center;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -79,5 +80,53 @@ a#footer-banner {
 }
 
 @media screen and (min-width: 878px) {
+  footer {
+    padding: $footer--padding__desktop;
+  }
 
+  footer .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: $footer--background__width--desktop 1fr 1fr 1fr;
+  }
+
+  footer #foundation-logo__footer {
+    background: url("../../assets/images/FWM-Logo-on-Dark-background-1.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: $footer--background__height--desktop;
+    width: $footer--background__width--desktop;
+  }
+
+  footer nav {
+    margin-left: 100px;
+  }
+
+  footer nav a {
+    display: inline;
+  }
+
+  footer nav h3 {
+    border-bottom: 0;
+  }
+
+  footer nav ul {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  footer .container {
+    grid-template-columns: $footer--background__width--desktop 1fr 2fr 1fr;
+  }
+
+  footer nav ul {
+    display: inline-block;
+  }
+
+  footer nav ul + ul {
+    margin-left: 40px;
+  }
 }
