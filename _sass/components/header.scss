@@ -20,14 +20,11 @@ header aside {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
   width: 100%;
 
   transform: scale(1, 0);
   transition: transform 150ms ease-in-out;
   transform-origin: top;
-
-  z-index: $elevation--navigation__drawer;
 }
 
 header aside a {
