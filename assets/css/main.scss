@@ -65,12 +65,19 @@ body, main, figure, ul, li, form {
 #landing-banner #fwm-logo {
   background-image: url("../../assets/images/FWM Logo on Dark background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   height: 430px;
   width: 588px;
 
   margin-bottom: 20px;
+}
+
+// shrink the #fwm-logo when resizing
+@media screen and (max-width: 600px) {
+  #landing-banner #fwm-logo {
+    width: 100%;
+  }
 }
 
 #landing-banner h3 {
@@ -86,4 +93,10 @@ body, main, figure, ul, li, form {
 
 #landing-banner button {
   margin-bottom: 112px;
+}
+
+@media screen and (max-width: 878px) {
+  #landing-banner .container {
+    padding: 0 23px;
+  }
 }
