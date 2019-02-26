@@ -17,6 +17,67 @@ footer #foundation-logo__footer {
   overflow: hidden;
 }
 
+footer nav {
+  margin-bottom: $footer--nav__margin--mobile;
+}
+
+footer nav h3, footer nav a {
+  color: $footer--text-color;
+}
+
+footer nav h3 {
+  text-transform: uppercase;
+  font-size: $footer--font-size;
+  font-weight: bold;
+  letter-spacing: $footer--nav-header__letter-spacing;
+  margin-bottom: 23px;
+  border-bottom: 1px solid $white;
+}
+
+footer nav a {
+  display: block;
+  font-size: $footer--font-size;
+  text-decoration: none;
+  font-weight: 100;
+}
+
+footer nav ul {
+  list-style: none;
+}
+
+footer nav li {
+  margin-bottom: 10px;
+}
+
+footer nav:last-of-type li {
+  margin-bottom: 23px;
+}
+
+a#footer-banner {
+  background: $schedule-consultation--background;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font--body;
+  font-size: $footer--font-size;
+  font-weight: bold;
+  letter-spacing: $schedule-consultation--letter-spacing;
+  position: relative;
+  padding: 23px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#footer-banner span::after {
+  content: "";
+  position: absolute;
+  left: calc(50% - 41px);
+  bottom: 14px;
+  border-bottom: 2px solid $white;
+  width: 82px;
+}
+
 @media screen and (min-width: 878px) {
 
 }
