@@ -87,7 +87,7 @@ a#footer-banner {
   footer .container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: $footer--background__width--desktop 1fr 1fr 1fr;
+    grid-template-columns: $footer--background__width--desktop .8fr 1fr 1fr;
   }
 
   footer #foundation-logo__footer {
