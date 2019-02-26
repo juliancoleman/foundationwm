@@ -1,0 +1,22 @@
+@import "../variables";
+@import "../fonts";
+
+footer {
+  background: $footer--background;
+  font-family: $font--body;
+  padding: $footer--padding__mobile;
+}
+
+footer #foundation-logo__footer {
+  background: url("../../assets/images/FWM Logo on Dark.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  height: $footer--background__height--mobile;
+  width: $footer--background__width--mobile;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 878px) {
+
+}
