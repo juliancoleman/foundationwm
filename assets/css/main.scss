@@ -102,6 +102,11 @@ body, main, figure, ul, li, form {
 }
 
 @media screen and (max-width: 878px) {
+  #landing-banner {
+    height: 650px;
+    justify-content: center;
+  }
+
   #landing-banner .container {
     padding: 0 23px;
   }
@@ -109,5 +114,9 @@ body, main, figure, ul, li, form {
   #landing-banner h3 {
     font-size: 24px;
     line-height: 36px;
+  }
+
+  #landing-banner button {
+    margin-bottom: 0;
   }
 }
