@@ -138,19 +138,18 @@ header nav a:hover {
     display: inline;
     opacity: 1;
   }
+
   header {
     background: linear-gradient(
       $header--background-gradient__start,
       $header--background-gradient__end
     );
-
-
   }
 
   header .container {
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
 
