@@ -7,6 +7,7 @@
 @import "components/header";
 @import "components/main"; // The semantic <main>, not a stylesheet entrypoint.
 @import "components/footer";
+@import "components/button";
 
 @import "variables";
 
@@ -75,14 +76,10 @@ body, main, figure, ul, li, form {
 
 // shrink the #fwm-logo when resizing
 @media screen and (max-width: 600px) {
-  #landing-banner {
-    height: 768px;
-  }
-
   #landing-banner #fwm-logo {
     height: 215px;
     width: 294px;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 }
 
@@ -103,7 +100,7 @@ body, main, figure, ul, li, form {
 
 @media screen and (max-width: 878px) {
   #landing-banner {
-    height: 650px;
+    height: 625px;
     justify-content: center;
   }
 
@@ -112,8 +109,8 @@ body, main, figure, ul, li, form {
   }
 
   #landing-banner h3 {
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   #landing-banner button {

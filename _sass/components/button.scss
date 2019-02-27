@@ -1,0 +1,121 @@
+@import "../variables";
+
+/**
+ * Buttons
+ *
+ * There are four types of buttons:
+ *   * Contained (high emphasis)
+ *   * Outlined (medium emphasis)
+ *   * Text (low-emphasis)
+ *   * Toggle
+ *
+ * For the purpose of this project, `toggle buttons` are
+ * not implemented.
+ *
+ * There are 3 styles of buttons regarding size:
+ *   * Default (most legible text; medium padding)
+ *   * Dense (smaller text; shorter padding)
+ *   * Expanded (larger text; more padding)
+ *
+ * Each size style contains its own padding styles.
+ *
+ * There are 3 primary color variants and 1 special variant:
+ *   * Default (bg: $blue-gray, text: $white)
+ *   * Light (bg: $white, text: $midnight-blue-accent-2)
+ *   * Dark (bg: $midnight-blue, text: $white)
+ *
+ *   * Bluescale (bg: inherit, text: $royal-blue-accent)
+ *
+ * You can add decorator icons to all buttons either on the
+ * left or right side of the button text. You can also have
+ * both simultaneously. While this project doesn't
+ * implement both sides, it's still capable. There are two
+ * variants of decorator icons:
+ *   * Default (bg: transparent, text: inherit)
+ *   * Contrasted
+ *
+ * The `contrasted` button decorator's background is the
+ * text color of the button itself, and the text color is
+ * the background of the button itself.
+ *
+ * Finally, there are 3 styles of contrasted decorator
+ * backgrounds:
+ *   * Default (squared edge)
+ *   * Circle (circular edge)
+ *   * Ellipses (Bowed edge)
+ */
+
+
+// Contained button base and color styles
+button {
+  outline: 0;
+  border: 0;
+  border-radius: $button--height__default;
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  background: $blue-gray;
+  color: $white;
+
+  letter-spacing: $button--letter-spacing;
+  height: $button--height__default;
+  font-size: $button--font-size__default;
+  font-weight: $button--font-weight__default;
+  line-height: $button--line-height__default;
+  padding: $button--padding__tb--default $button--padding__lr--default;
+
+  &.light {
+    background: $white;
+    color: $midnight-blue-accent-2;
+  }
+
+  &.dark {
+    background: $midnight-blue;
+    color: $white;
+  }
+
+  &.bluescale {
+    color: $royal-blue-accent;
+  }
+}
+
+
+// Text and outlined button color styles
+button.text, button.outlined {
+  background: transparent;
+
+  &.light {
+    color: $midnight-blue-accent-2;
+  }
+
+  &.dark {
+    color: $white;
+  }
+
+  &.bluescale {
+    color: $royal-blue-accent;
+  }
+}
+
+button.outlined {
+  border: 1px solid #B5B5B5;
+}
+
+button.dense {
+  height: $button--height__dense;
+
+  font-size: $button--font-size__dense;
+  font-weight: $button--font-weight__dense;
+  line-height: $button--line-height__dense;
+  padding: $button--padding__tb--dense $button--padding__lr--dense;
+}
+
+button.expanded {
+  height: $button--height__expanded;
+
+  font-size: $button--font-size__expanded;
+  font-weight: $button--font-weight__expanded;
+  line-height: $button--line-height__expanded;
+  padding: $button--padding__tb--expanded $button--padding__lr--expanded;
+}
