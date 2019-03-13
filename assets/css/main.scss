@@ -27,16 +27,19 @@ form {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
   max-width: $max-width;
 }
 
 .container-small {
+  position: relative;
   margin: 0 auto;
   max-width: $max-width__small;
 }
 
 .container-smallest {
+  position: relative;
   margin: 0 auto;
   max-width: $max-width__smallest;
 }
@@ -154,5 +157,23 @@ form {
   .services--subtitle {
     font-size: 20px;
     line-height: 28px;
+  }
+}
+
+@media screen and (max-width: $max-width) {
+  .container {
+    padding: 23px;
+  }
+}
+
+@media screen and (max-width: $max-width__small) {
+  .container-small {
+    padding: 23px;
+  }
+}
+
+@media screen and (max-width: $max-width__smallest) {
+  .container-smallest {
+    padding: 23px;
   }
 }
