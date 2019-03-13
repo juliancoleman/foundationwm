@@ -3,7 +3,6 @@
 
 @charset "utf-8";
 
-
 @import "components/header";
 @import "components/main"; // The semantic <main>, not a stylesheet entrypoint.
 @import "components/footer";
@@ -11,11 +10,18 @@
 
 @import "variables";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-body, main, figure, ul, li, form {
+body,
+main,
+figure,
+ul,
+li,
+form {
   margin: 0;
   padding: 0;
 }
@@ -25,11 +31,19 @@ body, main, figure, ul, li, form {
   max-width: $max-width;
 }
 
+.container-small {
+  margin: 0 auto;
+  max-width: $max-width__small;
+}
+
+.container-smallest {
+  margin: 0 auto;
+  max-width: $max-width__smallest;
+}
+
 ///////////////
 // Home page //
 ///////////////
-
-
 
 #landing-banner {
   position: relative;
@@ -60,7 +74,12 @@ body, main, figure, ul, li, form {
   right: 0;
   bottom: 0;
   left: 0;
-  background: radial-gradient($max-width at 50% 70%, rgba(13, 28, 53, 0) 0%, $navy-blue 100%), linear-gradient(180deg, rgba(20, 32, 52, 0.53) 48%, $navy-blue 90%);
+  background: radial-gradient(
+      $max-width at 50% 70%,
+      rgba(13, 28, 53, 0) 0%,
+      $navy-blue 100%
+    ),
+    linear-gradient(180deg, rgba(20, 32, 52, 0.53) 48%, $navy-blue 90%);
 }
 
 #landing-banner #fwm-logo {
@@ -115,5 +134,25 @@ body, main, figure, ul, li, form {
 
   #landing-banner button {
     margin-bottom: 0;
+  }
+}
+
+.services--subtitle {
+  font-family: $font--body;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 47px;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+  color: $blue-gray;
+
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .services--subtitle {
+    font-size: 20px;
+    line-height: 28px;
   }
 }

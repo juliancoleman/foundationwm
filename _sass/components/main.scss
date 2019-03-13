@@ -2,4 +2,57 @@
 
 main {
   background-color: $navy-blue;
+  height: 100%;
+}
+
+.text-section {
+  color: $blue-gray;
+  padding: calc(123px + 72px);
+  font-family: $font--body;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 53px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.section-header--variant-1 {
+  color: $white;
+  font-family: $font--heading;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 73px;
+  font-size: 48px;
+  letter-spacing: 0.3em;
+}
+
+.section-header--variant-2 {
+  color: $white;
+  font-family: $font--heading;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 74px;
+  font-size: 55px;
+  letter-spacing: 0.25em;
+}
+
+.section-header--sans {
+  color: $white;
+  font-family: $font--body;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 62px;
+  font-size: 40px;
+  letter-spacing: 0.15em;
+}
+
+.white {
+  color: $white;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

@@ -148,4 +148,8 @@ a#footer-banner {
   footer nav ul + ul {
     margin-left: 40px;
   }
+
+  footer nav a {
+    font-weight: unset;
+  }
 }

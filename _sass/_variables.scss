@@ -1,12 +1,12 @@
 @import "palette";
 
 // Box shadow
-$box-shadow: 0 2px 5px rgba(8, 33, 56, 0.15),
-             0 2px 20px rgba(8, 33, 56, 0.1);
-
+$box-shadow: 0 2px 5px rgba(8, 33, 56, 0.15), 0 2px 20px rgba(8, 33, 56, 0.1);
 
 // Containers
 $max-width: 1280px;
+$max-width__small: 1080px;
+$max-width__smallest: 750px;
 
 /**
  * Elevation
@@ -60,15 +60,15 @@ $footer--text-color: $white;
 $footer--font-size: 18px;
 $footer--nav-header__letter-spacing: 0.15em;
 $footer--nav__margin--mobile: 3em;
-$schedule-consultation--background: rgba($midnight-blue-accent, .9);
+$schedule-consultation--background: rgba($midnight-blue-accent, 0.9);
 $schedule-consultation--letter-spacing: 0.2em;
 
 // Buttons
 $button--letter-spacing: 0.15em;
 
-$button--height__dense: 40px; // specidically, the buttons on the contact us dialog
-$button--height__expanded: 60px;  // specifically, the button on the home page banner
-$button--height__default: 50px;   // all other buttons
+$button--height__dense: 40px; // specifically, the buttons on the contact us dialog
+$button--height__expanded: 60px; // specifically, the button on the home page banner
+$button--height__default: 50px; // all other buttons
 $button--font-size__dense: 14px;
 $button--font-size__expanded: 18px;
 $button--font-size__default: 24px;
@@ -82,7 +82,7 @@ $button--padding__lr--dense: 19px;
 $button--padding__lr--expanded: 27px;
 $button--padding__lr--default: 28px;
 $button--padding__tb--dense: 8px;
-$button--padding__tb--expanded: 22px;
+$button--padding__tb--expanded: 19.5px;
 $button--padding__tb--default: 8px;
 
 // Home page

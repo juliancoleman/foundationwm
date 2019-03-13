@@ -58,8 +58,13 @@ button {
   background: $blue-gray;
   color: $white;
 
+  position: relative;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+
   letter-spacing: $button--letter-spacing;
-  height: $button--height__default;
+  // max-height: $button--height__default;
   font-size: $button--font-size__default;
   font-weight: $button--font-weight__default;
   line-height: $button--line-height__default;
@@ -78,19 +83,26 @@ button {
   &.bluescale {
     color: $royal-blue-accent;
   }
+
+  & i.material-icons {
+    font-size: $button--font-size__default * 2;
+    line-height: $button--font-size__default;
+    // margin-right: $button--font-size__default / 2;
+  }
 }
 
 
 // Text and outlined button color styles
 button.text, button.outlined {
   background: transparent;
+  color: $blue-gray;
 
   &.light {
-    color: $midnight-blue-accent-2;
+    color: $white;
   }
 
   &.dark {
-    color: $white;
+    color: $midnight-blue;
   }
 
   &.bluescale {
@@ -103,19 +115,105 @@ button.outlined {
 }
 
 button.dense {
-  height: $button--height__dense;
+  // max-height: $button--height__dense;
 
   font-size: $button--font-size__dense;
   font-weight: $button--font-weight__dense;
   line-height: $button--line-height__dense;
   padding: $button--padding__tb--dense $button--padding__lr--dense;
+
+  & i.material-icons {
+    font-size: $button--font-size__dense * 2;
+    line-height: $button--font-size__dense;
+    // margin-right: $button--font-size__dense / 2;
+  }
 }
 
 button.expanded {
-  height: $button--height__expanded;
+  // max-height: $button--height__expanded;
 
   font-size: $button--font-size__expanded;
   font-weight: $button--font-weight__expanded;
   line-height: $button--line-height__expanded;
   padding: $button--padding__tb--expanded $button--padding__lr--expanded;
+
+  & i.material-icons {
+    font-size: $button--font-size__expanded * 2;
+    line-height: $button--font-size__expanded;
+    // margin-right: $button--font-size__expanded / 2;
+  }
+}
+
+button.icon {
+  i.material-icons:first-child:only-of-type {
+    position: absolute;
+    left: 21px - ($button--font-size__default / 2);
+    top: 36%;
+
+    & + span {
+      margin-left: $button--padding__lr--default;
+    }
+  }
+
+  &.dense i.material-icons:first-child:only-of-type {
+    left: 21px - ($button--font-size__dense / 2);
+
+    & + span {
+      margin-left: $button--padding__lr--dense;
+    }
+  }
+
+  &.expanded i.material-icons:first-child:only-of-type {
+    left: 21px - ($button--font-size__expanded / 2);
+
+    & + span {
+      margin-left: $button--padding__lr--expanded;
+    }
+  }
+
+  i.material-icons:last-child:only-of-type {
+    right: 21px - ($button--font-size__default / 2);
+    top: 36%;
+
+    & ~ span {
+      margin-right: $button--padding__lr--default;
+    }
+  }
+
+  &.dense {
+    i.material-icons:last-child:only-of-type {
+      right: 21px - ($button--font-size__dense / 2);
+
+    }
+    span + i.material-icons:last-child:only-of-type {
+      margin-right: $button--padding__lr--dense;
+    }
+  }
+
+  &.expanded i.material-icons:last-child:only-of-type {
+    right: 21px - ($button--font-size__expanded / 2);
+
+    & ~ span {
+      margin-right: $button--padding__lr--expanded;
+    }
+  }
+
+
+  &.contrasted {
+    i.material-icons {
+      background: $white;
+    }
+
+    &.light {
+      i.material-icons {
+        background: $midnight-blue-accent-2;
+      }
+    }
+
+    &.dark {
+      i.material-icons {
+        background: $midnight-blue;
+      }
+    }
+  }
 }
