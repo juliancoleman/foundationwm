@@ -1,0 +1,75 @@
+.half {
+  margin: 0 !important; // remove floating-center
+  max-width: $max-width / 2 + 100 !important;
+}
+
+.half-small {
+  margin: 0 !important;
+  max-width: $max-width__small / 2 + 100 !important;
+}
+
+.half-smallest {
+  margin: 0 !important;
+  max-width: $max-width__smallest / 2 + 100 !important;
+}
+
+.right {
+  float: right;
+}
+
+.image-container {
+  position: absolute;
+  height: 575px;
+  width: 575px;
+  left: -210px;
+  border-radius: 50% 50%;
+  overflow: hidden; // fix the border-radius seemingly not applying
+  transform: rotate(-5.5deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.right {
+    top: 140px + 123px;
+    right: 27px;
+    left: unset;
+
+    &.reset {
+      top: 123px + 477;
+    }
+  }
+
+  .overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(4, 41, 81, 0.2),
+      rgba(4, 41, 81, 0.2)
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  img.scale-0_4 {
+    transform: scale(0.4);
+  }
+
+  img.scale-0_7 {
+    transform: scale(0.74);
+  }
+
+  img.scale-1_1 {
+    transform: scale(1.1);
+  }
+
+  img.scale-2 {
+    transform: scale(2);
+  }
+
+  img.scale-2_5 {
+    transform: scale(2.5);
+  }
+}

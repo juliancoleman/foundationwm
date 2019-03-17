@@ -45,7 +45,6 @@
  *   * Ellipses (Bowed edge)
  */
 
-
 // Contained button base and color styles
 button {
   outline: 0;
@@ -80,6 +79,10 @@ button {
     color: $white;
   }
 
+  &.dark-text {
+    color: $midnight-blue;
+  }
+
   &.bluescale {
     color: $royal-blue-accent;
   }
@@ -91,9 +94,9 @@ button {
   }
 }
 
-
 // Text and outlined button color styles
-button.text, button.outlined {
+button.text,
+button.outlined {
   background: transparent;
   color: $blue-gray;
 
@@ -111,7 +114,7 @@ button.text, button.outlined {
 }
 
 button.outlined {
-  border: 1px solid #B5B5B5;
+  border: 1px solid #b5b5b5;
 }
 
 button.dense {
@@ -183,7 +186,6 @@ button.icon {
   &.dense {
     i.material-icons:last-child:only-of-type {
       right: 21px - ($button--font-size__dense / 2);
-
     }
     span + i.material-icons:last-child:only-of-type {
       margin-right: $button--padding__lr--dense;
@@ -197,7 +199,6 @@ button.icon {
       margin-right: $button--padding__lr--expanded;
     }
   }
-
 
   &.contrasted {
     i.material-icons {

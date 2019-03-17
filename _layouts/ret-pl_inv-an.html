@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+    <title>{{ site.title }}</title>
+
+    <!-- https://stackoverflow.com/a/42969608 -->
+    <!-- https://crbug.com/332189, https://crbug.com/167083 -->
+    <script></script>
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    <main>
+      <div class="image-container right">
+        <div class="overlay"></div>
+        <img
+          src="{{ page.image }}"
+          class="{{ page.image_classes }}"
+          alt="page_image"
+        />
+      </div>
+
+      <div class="text-section">
+        <div class="container-small">
+          <h3 class="section-header--variant-2">{{ page.title }}</h3>
+          <div class="half">
+            <p>{{ page.caption_1 }}</p>
+            <p>{{ page.caption_2 }}</p>
+
+            {% if page.caption_3 %}
+            <p>{{ page.caption_3 }}</p>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="container-small">
+          <h4 class="planning-areas">We offer services in:</h4>
+          <nav class="services-list alt white">
+            <ul>
+              {% for service in page.services_list_1 %}
+              <li>
+                <a href="">{{ service }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            <ul>
+              {% for service in page.services_list_2 %}
+              <li>
+                <a href="">{{ service }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+
+        <div class="container-small" style="margin-top: 123px;">
+          <button class="dark-text">schedule a free consultation</button>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

@@ -2,7 +2,13 @@
 
 main {
   background-color: $navy-blue;
-  height: 100%;
+  height: auto;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .text-section {
@@ -14,6 +20,12 @@ main {
   line-height: 53px;
   font-size: 24px;
   letter-spacing: 0.1em;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 .section-header--variant-1 {
@@ -86,6 +98,17 @@ main {
   font-weight: normal;
   line-height: 57px;
   font-size: 35px;
+
+  &.alt {
+    line-height: 44px;
+    font-size: 30px;
+
+    display: flex;
+
+    ul {
+      flex: 1;
+    }
+  }
 
   ul {
     list-style: none;
