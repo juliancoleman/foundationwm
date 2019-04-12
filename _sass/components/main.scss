@@ -18,7 +18,7 @@ main {
   font-style: normal;
   font-weight: normal;
   line-height: 53px;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0.1em;
 
   &::after {
@@ -35,7 +35,7 @@ main {
   font-style: normal;
   font-weight: bold;
   line-height: 73px;
-  font-size: 48px;
+  font-size: 42px;
   letter-spacing: 0.3em;
 }
 
@@ -46,7 +46,7 @@ main {
   font-style: normal;
   font-weight: 600;
   line-height: 74px;
-  font-size: 55px;
+  font-size: 46px;
   letter-spacing: 0.25em;
 }
 
@@ -79,7 +79,7 @@ main {
 
 .planning-areas {
   line-height: 49px;
-  font-size: 30px;
+  font-size: 24px;
   font-style: normal;
   font-weight: normal;
 }
@@ -97,13 +97,15 @@ main {
   font-style: normal;
   font-weight: normal;
   line-height: 57px;
-  font-size: 35px;
+  font-size: 24px;
 
   &.alt {
     line-height: 44px;
-    font-size: 30px;
+    font-size: 24px;
 
     display: flex;
+
+    pointer-events: none;
 
     ul {
       flex: 1;
@@ -143,4 +145,28 @@ main {
 }
 
 @media screen and (max-width: 878px) {
+  .text-section {
+    padding-top: 42px;
+  }
+
+  .services-list {
+    flex-direction: column;
+
+    ul {
+      margin-right: 0 !important;
+    }
+
+    &.alt {
+      font-size: 18px !important;
+      width: 100%;
+    }
+  }
+
+  .section-header--variant-1 {
+    font-size: 32px;
+  }
+
+  .section-header--variant-2 {
+    font-size: 32px;
+  }
 }

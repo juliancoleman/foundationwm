@@ -44,7 +44,7 @@ $header--background-gradient__start: rgba($midnight-blue-accent, 0.7);
 $header--background-gradient__end: rgba($midnight-blue-accent, 0.4);
 $header--text-color: $white;
 $header--padding: 44px;
-$header--font-size: 22px;
+$header--font-size: 18px;
 $header--line-height: 36px;
 $header--letter-spacing: 0.1em;
 
@@ -70,8 +70,8 @@ $button--height__dense: 40px; // specifically, the buttons on the contact us dia
 $button--height__expanded: 60px; // specifically, the button on the home page banner
 $button--height__default: 50px; // all other buttons
 $button--font-size__dense: 14px;
-$button--font-size__expanded: 18px;
-$button--font-size__default: 24px;
+$button--font-size__expanded: 14px;
+$button--font-size__default: 14px;
 $button--font-weight__dense: bold;
 $button--font-weight__expanded: 600;
 $button--font-weight__default: 600;

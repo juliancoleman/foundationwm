@@ -32,7 +32,6 @@ header aside a {
   display: block;
 }
 
-
 header nav ul {
   list-style: none;
 }
@@ -52,14 +51,15 @@ header nav a {
   transition: opacity 75ms ease-in-out;
 }
 
-
 header nav a:hover {
   color: $black;
 }
 
 ////////////
 
-.nav-toggle { display: none; }
+.nav-toggle {
+  display: none;
+}
 .nav-toggle:checked ~ aside {
   transform: scale(1, 1);
 }
@@ -93,7 +93,10 @@ header nav a:hover {
 ////////////
 
 @media screen and (min-width: 878px) {
-  .nav-toggle-label, header aside { display: none; }
+  .nav-toggle-label,
+  header aside {
+    display: none;
+  }
 
   header > nav,
   header .search {
@@ -151,7 +154,6 @@ header nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
-
 
   header nav {
     display: flex;
