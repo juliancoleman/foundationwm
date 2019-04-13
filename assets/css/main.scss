@@ -184,6 +184,10 @@ form {
 @media screen and (max-width: $max-width) {
   .container {
     padding: 23px;
+
+    > .container-smallest {
+      padding: 0;
+    }
   }
 }
 

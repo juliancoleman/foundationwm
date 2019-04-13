@@ -26,7 +26,8 @@ footer nav.contact {
   margin-bottom: 0;
 }
 
-footer nav h3, footer nav a {
+footer nav h3,
+footer nav a {
   color: $footer--text-color;
 }
 
@@ -105,7 +106,6 @@ a#footer-banner {
     height: calc(100% - 0px);
     width: $footer--background__width--desktop;
   }
-
 
   footer nav {
     margin-left: 20px;
