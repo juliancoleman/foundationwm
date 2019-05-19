@@ -1,0 +1,128 @@
+@import '../variables';
+@import '../fonts';
+
+$card__header--height: 128px;
+$card--height: 373px;
+$card__content--height: $card--height - $card__header--height;
+
+.resource-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px 44px;
+}
+
+.resource-card {
+  border-radius: 15px 15px;
+  overflow: hidden;
+
+  & .card-content {
+    height: $card__content--height;
+    padding: 20px;
+    color: $white;
+    font-family: Martel Sans;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 34px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+  }
+
+  & .card-header {
+    background: $white;
+    height: $card__header--height;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+
+    &#calpers,
+    &#calstrs,
+    &#_403bcomply,
+    &#rightcapital,
+    &#interactivebrokers,
+    &#fundchoice {
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
+
+    &#calpers {
+      background-image: url('../images/calpers.png');
+      background-size: 67px 70px;
+
+      & + .card-content {
+        background: #015294;
+      }
+    }
+
+    &#calstrs {
+      background-image: url('../images/calstrs.png');
+      background-size: 170px 58px;
+
+      & + .card-content {
+        background: #EF4937;
+      }
+    }
+
+    &#_403bcomply {
+      background-image: url('../images/403bcomply.png');
+      background-size: 207px 84px;
+
+      & + .card-content {
+        background: #EE4025;
+      }
+    }
+
+    &#rightcapital {
+      background-image: url('../images/rightcapital.png');
+      background-size: 207px 44px;
+      background-color: #2F3A4E;
+
+      & + .card-content {
+        background: $white;
+        color: $black;
+      }
+    }
+
+    &#interactivebrokers {
+      background-image: url('../images/interactivebrokers.png');
+      background-size: 198px 31px;
+
+      & + .card-content {
+        background: #D81222;
+      }
+    }
+
+    &#fundchoice {
+      background-image: url('../images/fundchoice.png');
+      background-size: 186px 42px;
+
+      & + .card-content {
+        background: #FFE200;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $max-width__smallest) {
+  .resource-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .resource-card {
+      width: 267px;
+      margin-bottom: 40px;
+
+      &:nth-child(2n - 1) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .resource-card {
+    margin-right: 0 !important;
+  }
+}

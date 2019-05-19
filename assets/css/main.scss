@@ -7,6 +7,7 @@
 @import "components/main"; // The semantic <main>, not a stylesheet entrypoint.
 @import "components/footer";
 @import "components/button";
+@import "components/resource-card";
 
 @import "components/tax-op_ins_est-pl";
 
@@ -68,7 +69,7 @@ form {
 // Home page //
 ///////////////
 
-#landing-banner {
+#landing-banner, #resources {
   position: relative;
   height: 950px;
   background-image: url("https://trekbible.com/wp-content/uploads/2018/08/california-cliff-cliffs-36363.jpg");
@@ -84,14 +85,20 @@ form {
   font-family: $font--body;
 }
 
-#landing-banner .container {
+#resources {
+  background-image: url('../images/elderly-bench.jpg');
+  justify-content: flex-start;
+  height: auto;
+}
+
+#landing-banner .container, #resources .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: $elevation--card__resting;
 }
 
-#landing-banner .overlay {
+#landing-banner .overlay, #resources .overlay {
   position: absolute;
   top: 0;
   right: 0;
