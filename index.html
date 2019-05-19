@@ -7,9 +7,11 @@ layout: default
   <div class="container">
     <figure id="fwm-logo"></figure>
     <h3>It's wealth management, your way.</h3>
-    <button class="expanded light bluescale">
-      <span>schedule a consultation</span>
-    </button>
+    <form action="https://calendly.com/foundationwm/">
+      <button class="expanded light bluescale">
+        <span>schedule a consultation</span>
+      </button>
+    </form>
   </div>
 </figure>
 
@@ -19,4 +21,43 @@ layout: default
     We offer services in six different areas so that no matter your financial
     goals, we can help.
   </h5>
+</section>
+
+<section class="service-card-container">
+  <div id="retirement" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/retirement-planning">
+      <button class="dark">retirement</button>
+    </form>
+  </div>
+  <div id="taxes" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/tax-optimization">
+      <button class="dark">taxes</button>
+    </form>
+  </div>
+  <div id="investments" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/investment-analysis">
+      <button class="dark">investments</button>
+    </form>
+  </div>
+  <div id="insurance" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/insurance">
+      <button class="dark">insurance</button>
+    </form>
+  </div>
+  <div id="education" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/education-savings">
+      <button class="dark">education</button>
+    </form>
+  </div>
+  <div id="estate" class="service-card">
+    <div class="overlay"></div>
+    <form action="/services/estate-planning">
+      <button class="dark">estate</button>
+    </form>
+  </div>
 </section>

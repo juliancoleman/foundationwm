@@ -1,0 +1,62 @@
+@import './variables';
+@import './fonts';
+
+.service-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+
+  .service-card {
+    padding: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 266px;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(180deg, rgba(6, 26, 57, 0.24) 0%, rgba(6, 26, 57, 0.8) 100%, rgba(6, 26, 57, 0.8) 100%);
+    }
+
+    & {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &#retirement {
+      background-image: url('https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2015/03/16/102508296-154763748.530x298.jpg?v=1499705584');
+    }
+
+    &#taxes {
+      background-image: url('http://www.wovencapital.net/wp-content/uploads/2016/01/Side-Business-Taxes.jpg');
+    }
+
+    &#investments {
+      background-image: url('https://si.wsj.net/public/resources/images/IF-AC796_JUNKST_GR_20161103121700.jpg');
+    }
+
+    &#insurance {
+      background-image: url('https://www.hpminsurance.com/hs-fs/hubfs/Assets/Health%20and%20Life/health%20insurance%2072.jpg?width=638&name=health%20insurance%2072.jpg');
+    }
+
+    &#education {
+      background-image: url('https://nhwomensfoundation.org/wp-content/uploads/2017/06/Female-student-studying-at-college-library-620952978_2125x1416.jpeg');
+      background-position: bottom center;
+    }
+
+    &#estate {
+      background-image: url('http://www.sanclementerealestate.com/images/monterey-homes-for-sale-in-talega-san-clemente-real-estate_1000.jpg');
+    }
+  }
+}
+
+@media screen and (max-width: $max-width__smallest) {
+  .service-card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
